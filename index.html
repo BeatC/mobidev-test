@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./styles.css">
+	<title>Mobidev Test</title>
+</head>
+<body>
+	<div class="wrapper"></div>
+	<script type="text/template" id="listItem">
+		<div class="item__wrapper">
+			<img src="<%= thumbUrl %>" alt="<%= title %>" class="item__image">
+			<section class="item__description">
+				<h2 class="description__price"><%= price %></h2>
+				<div class="description__title"><%= title %></div>
+			</section>
+		</div>
+	</script>
+
+	<script type="text/template" id="appartmentList">
+		<div class="entity__number">
+			<span class="entity__description">Total results:</span>
+			<span class="number__current"><%= length %></span> 
+		</div>
+		<ul class="appartment__list"></ul>
+	</script>
+
+	<script type="text/template" id="appartmentMore">
+		<header>
+			<a href="#">Back</a>
+			<span>Property details</span>
+		</header>
+		<h2 class="more__price"><%= price %></h2>
+		<h3 class="more__title"><%= title %></h3>
+		<img src="<%= imgUrl %>" alt="<%= title %>" class="more__image"/>
+		<div class="more__description">
+			<div class="description__rooms">
+				<span class="rooms__bedroom"><%= bedroomNumber %></span>
+				bed,
+				<span class="rooms__bathroom"><%= bathroomNumber %></span>
+				bathroom
+			</div>
+			<p class="description__summary">
+			 <%= summary %>
+			</p>
+		</div>
+
+	</script>
+	<script src="./bower_components/zepto/zepto.min.js"></script>
+	<script src="./bower_components/underscore/underscore-min.js"></script>
+	<script src="./bower_components/backbone/backbone.js"></script>
+	<script src="./main.js"></script>		
+</body>
+</html>
